@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 using Input = UnityEngine.Input;
 
@@ -78,5 +79,30 @@ public class playerController : MonoBehaviour
         {
             tryJump();
         }
+
+        if(health <= 0)
+        {
+            anim.SetBool("die", true);
+            StartCoroutine("Die");
+        }
+    }
+    IEnumerator Die()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Enemy")
+        {
+            health -= 5;
+        }
+        if (other.gameObject.name == "FallCollider")
+        {
+            SceneManager.LoadScene(0);
+        }
+
+
     }
 }
