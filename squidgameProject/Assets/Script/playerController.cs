@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
+using Input = UnityEngine.Input;
+
+
 
 public class playerController : MonoBehaviour
 {
     public float moveSpeed;
     public float rotatespeed = 75f;
     public float jumpforce;
-    public Rigidbody rig;
     public int health;
-
     public int coinCount;
+    public Rigidbody rig;
+    public Animator anim;
 
     void Move()
     {
@@ -32,7 +36,16 @@ public class playerController : MonoBehaviour
         rig.velocity = dir;
 
         //rig.MoveRotation(rig.rotation * angleRot);
+        if (Mathf.Abs(x) > 0.1f || Mathf.Abs(z) > 0.1f)
+        {
+           anim.SetBool("IsRunning", true);
+        }
+        else
+        {
+            anim.SetBool("IsRunning", false);
+        }
     }
+
     void tryJump()
     {
         //create a ray facing down
@@ -40,6 +53,7 @@ public class playerController : MonoBehaviour
 
         //shoot the raycast
         if (Physics.Raycast(ray, 1.5f)) {
+            anim.SetTrigger("IsJumping");
             rig.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
 
         }
