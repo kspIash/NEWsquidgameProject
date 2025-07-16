@@ -5,13 +5,13 @@ using UnityEngine;
 public class pickups : MonoBehaviour
 {
     //reference to player
-    public playerController player;
+    public PlayerController player;
 
     // Start is called before the first frame update
     void Start()
     {
         //grab a reference to the player
-        player = GameObject.Find("Player").GetComponent<playerController>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     void OnTriggerEnter(Collider other)

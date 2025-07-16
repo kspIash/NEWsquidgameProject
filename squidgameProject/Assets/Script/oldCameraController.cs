@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class oldCameraController : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     [Header("References")]
     public Transform orientation;
@@ -11,15 +11,13 @@ public class oldCameraController : MonoBehaviour
 
     public float rotationSpeed;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDir.normalized;
