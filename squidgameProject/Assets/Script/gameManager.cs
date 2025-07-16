@@ -22,9 +22,15 @@ public class gameManager : MonoBehaviour
     public TMP_Text countdownText;
     public int countdown;
 
+    [Header("End Screen UI")]
+    public TMP_Text endUI_score;
+    public TMP_Text endUI_time;
+
+
     [Header("Screens")]
     public GameObject countdownUI;
     public GameObject gameUI;
+    public GameObject endUI;
 
     // Start is called before the first frame update
     void Start()
@@ -85,8 +91,23 @@ public class gameManager : MonoBehaviour
 
         //disable player movement
         player.enabled = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
+
+        // set the UI to display your stats
+        endUI_score.text = "Skroins: " + player.coinCount;
+        endUI_time.text = "Time: " + (time * 1).ToString("F2");
+        SetScreen(endUI);
     }
+
+    public void OnRestartButton()
+    {
+        // restart the scene to play again
+        SceneManager.LoadScene(0);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -107,8 +128,9 @@ public class gameManager : MonoBehaviour
     public void SetScreen(GameObject screen)
     {
         // disable all other screens
-        gameUI.SetActive(true);
+        gameUI.SetActive(false);
         countdownUI.SetActive(false);
+        endUI.SetActive(false);
 
         // activate the requested screen
         screen.SetActive(true);
