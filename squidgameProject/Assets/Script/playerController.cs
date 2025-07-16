@@ -9,17 +9,21 @@ using Input = UnityEngine.Input;
 
 public class playerController : MonoBehaviour
 {
+    [Header("Move Components")]
     public float moveSpeed;
     public float rotatespeed = 75f;
     public float jumpforce;
-    public int health;
-    public int coinCount;
+    [Header("Components")]
     public Rigidbody rig;
     public Animator anim;
+    [Header("Statistics")]
+    public int health;
+    public int coinCount;
+    
 
     void Move()
     {
-        //get the input axis
+        // get the input axis
         float x = Input.GetAxis("Horizontal");
 
         float z = Input.GetAxis("Vertical");
