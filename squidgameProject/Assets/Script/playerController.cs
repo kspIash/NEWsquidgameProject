@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // if we have collided with the Enemy, we will take damage
-        if (other.gameObject.name == "Enemy")
+        if (other.gameObject.name == "collider" || other.gameObject.name == "Enemy")
         {
             health -= 5;
         }

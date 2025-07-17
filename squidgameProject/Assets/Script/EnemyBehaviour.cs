@@ -27,7 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
             MoveToNextPatrolLocation();
         }
     }
-    void InitializePatrolRoute()
+    void InitializePatrolRoute() 
     {
         foreach (Transform child in locations)
         {

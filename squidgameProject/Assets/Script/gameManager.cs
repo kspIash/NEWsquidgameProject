@@ -8,7 +8,7 @@ using TMPro;
 public class gameManager : MonoBehaviour
 {
     [Header("Game Variables")]
-    public PlayerController player;
+    public PlayerMovementTutorial player;
     public float time;
     public bool timeActive;
 
@@ -35,7 +35,7 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        player = GameObject.Find("Player").GetComponent<PlayerMovementTutorial>();
 
         //make sure timer is set to zero
         time = 0;
@@ -106,6 +106,7 @@ public class gameManager : MonoBehaviour
     {
         // restart the scene to play again
         SceneManager.LoadScene(0);
+        endUI.SetActive(false);
     }
 
     // Update is called once per frame

@@ -1,22 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pickups : MonoBehaviour
+public class Pickups : MonoBehaviour
 {
-    //reference to player
-    public PlayerController player;
+    // we use a reference to the player to change any variables within that script
+    public PlayerMovementTutorial player;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        //grab a reference to the player
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        // get a reference to the player 
+        player = GameObject.Find("Player").GetComponent<PlayerMovementTutorial>();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // if the player collides with the coin, then the coinScore will incrase and object will be destroyed
+        // if the player collides with the player, the player's coin score will increase, and we destroy the coin object
         if (other.name == "Player")
         {
             player.coinCount++;
