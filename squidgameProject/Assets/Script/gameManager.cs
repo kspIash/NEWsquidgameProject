@@ -97,8 +97,8 @@ public class gameManager : MonoBehaviour
         
 
         // set the UI to display your stats
-        endUI_score.text = "Skroins: " + player.coinCount;
-        endUI_time.text = "Time: " + (time * 1).ToString("F2");
+        endUI_score.text = "keys- " + player.coinCount;
+        endUI_time.text = "time- " + (time * 1).ToString("F2");
         SetScreen(endUI);
     }
 
@@ -119,7 +119,7 @@ public class gameManager : MonoBehaviour
         }
 
         // set the UI to display stats
-        GameUI_score.text = "skroins: " + player.coinCount;
+        GameUI_score.text = "keys-  " + player.coinCount;
         GameUI_health.text = "health- " + player.health;
         GameUI_time.text = "time- " + (time * 1).ToString("F2");
 

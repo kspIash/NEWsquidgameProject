@@ -9152,6 +9152,7 @@ struct cameraTools_t395141A7BA2D59BABA1A16EF3BB207D1B4AB6EF0  : public MonoBehav
 };
 struct finishLine_t12D60F83B0B74981AA8D657532007AE41AB6250B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	PlayerMovementTutorial_tF3481A17190F3D777D57EFB88F0A35D17BCA917D* ___player;
 	gameManager_t6E03B135E5F40E1EAB7879121D9C8918878DA309* ___Manager;
 };
 struct fx_EffectObject_t8C53C5E451B9DD68C5E5B99D038435A0354057DB  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -13432,9 +13433,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3906[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3930[4] = 
 {
 	static_cast<int32_t>(offsetof(EnemyBehaviour_t52FF06E248329D1FCAAB88A74DBC1600374B9CF0, ___player)),static_cast<int32_t>(offsetof(EnemyBehaviour_t52FF06E248329D1FCAAB88A74DBC1600374B9CF0, ___locations)),static_cast<int32_t>(offsetof(EnemyBehaviour_t52FF06E248329D1FCAAB88A74DBC1600374B9CF0, ___locationIndex)),static_cast<int32_t>(offsetof(EnemyBehaviour_t52FF06E248329D1FCAAB88A74DBC1600374B9CF0, ___agent)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3931[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3931[2] = 
 {
-	static_cast<int32_t>(offsetof(finishLine_t12D60F83B0B74981AA8D657532007AE41AB6250B, ___Manager)),};
+	static_cast<int32_t>(offsetof(finishLine_t12D60F83B0B74981AA8D657532007AE41AB6250B, ___player)),static_cast<int32_t>(offsetof(finishLine_t12D60F83B0B74981AA8D657532007AE41AB6250B, ___Manager)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3932[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CCountDownRoutineU3Ed__14_t9E3B966916C22FD3EDB835A0EA267472343209C5, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CCountDownRoutineU3Ed__14_t9E3B966916C22FD3EDB835A0EA267472343209C5, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CCountDownRoutineU3Ed__14_t9E3B966916C22FD3EDB835A0EA267472343209C5, ___U3CU3E4__this)),};

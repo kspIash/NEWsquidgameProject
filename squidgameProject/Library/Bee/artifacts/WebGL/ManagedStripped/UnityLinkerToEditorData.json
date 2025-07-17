@@ -775,9 +775,7 @@
           },
           {
             "name": "SphereCollider",
-            "scenes": [
-              "Assets/Scenes/fixedCam.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           }

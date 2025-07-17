@@ -38,6 +38,9 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -45,7 +48,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateEditor
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -184,48 +186,46 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 4346}
+      Script: {instanceID: 4218}
     - Class: 114
-      Script: {instanceID: 4434}
+      Script: {instanceID: 4348}
     - Class: 114
-      Script: {instanceID: 4556}
+      Script: {instanceID: 4436}
     - Class: 114
-      Script: {instanceID: 4616}
+      Script: {instanceID: 4558}
     - Class: 114
-      Script: {instanceID: 4628}
+      Script: {instanceID: 4618}
     - Class: 114
-      Script: {instanceID: 4726}
+      Script: {instanceID: 4630}
     - Class: 114
-      Script: {instanceID: 5012}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 5014}
     - Class: 114
-      Script: {instanceID: 5386}
+      Script: {instanceID: 5090}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 5388}
     - Class: 114
-      Script: {instanceID: 5706}
+      Script: {instanceID: 5574}
     - Class: 114
-      Script: {instanceID: 5862}
+      Script: {instanceID: 5708}
     - Class: 114
-      Script: {instanceID: 5978}
+      Script: {instanceID: 5864}
     - Class: 114
-      Script: {instanceID: 6008}
+      Script: {instanceID: 5980}
     - Class: 114
-      Script: {instanceID: 6188}
+      Script: {instanceID: 6010}
     - Class: 114
-      Script: {instanceID: 6218}
+      Script: {instanceID: 6190}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 6220}
     - Class: 114
-      Script: {instanceID: 8130}
+      Script: {instanceID: 6534}
     - Class: 114
-      Script: {instanceID: 43948}
+      Script: {instanceID: 8132}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -252,16 +252,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 477d527715ed7def8cc33f51a8568e72
-    assemblyName: Assembly-CSharp
-    namespaceName: Suimono.Core
-    className: cameraTools
-  - hash:
-      serializedVersion: 2
       Hash: 447fe94fd6cbca7596115d41ee52d79f
     assemblyName: Assembly-CSharp
     namespaceName: Suimono.Core
     className: SuimonoModule
+  - hash:
+      serializedVersion: 2
+      Hash: 477d527715ed7def8cc33f51a8568e72
+    assemblyName: Assembly-CSharp
+    namespaceName: Suimono.Core
+    className: cameraTools
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -444,7 +444,7 @@ ScriptsOnlyBuild:
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
-      Hash: afd86aae967ccdbbdb1ce696f0d7b351
+      Hash: 31502006eafa85f0bfb1442a410a1b76
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: finishLine
@@ -790,6 +790,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineGroupComposer
+  - hash:
+      serializedVersion: 2
+      Hash: d795e7dbb2172cf1f81111980a294d1f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerMovementTutorial
   - hash:
       serializedVersion: 2
       Hash: 4718916586b3818eb69bf65df61f0f3a
@@ -1636,12 +1642,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: d795e7dbb2172cf1f81111980a294d1f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerMovementTutorial
   platform: 20
   scenePathNames:
   - Assets/Scenes/fixedCam.unity

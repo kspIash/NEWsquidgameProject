@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class finishLine : MonoBehaviour
 {
+    public PlayerMovementTutorial player;
     public gameManager Manager;
 
     private void OnTriggerEnter(Collider other)
     {
-        // end the game
-        Manager.endGame();
+        if (player.coinCount == 3)
+        {
+            // end the game
+            Manager.endGame();
+        }
+
     }
    
 
